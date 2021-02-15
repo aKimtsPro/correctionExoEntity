@@ -26,7 +26,7 @@ public class DataInit implements InitializingBean {
     public void afterPropertiesSet() throws Exception {
 
         // initEmploye();
-        // initSupermarche();
+        initSupermarche();
     }
 
     private void initEmploye(){
@@ -64,6 +64,7 @@ public class DataInit implements InitializingBean {
                 .nom("supermarche1")
                 .adresse("rue de supermarche")
                 .directeur(employe)
+                .employes(employeRepository.findAll())
                 .heureOuverture(LocalTime.of(8, 30))
                 .heureFermeture(LocalTime.of(19, 0))
                 .build();

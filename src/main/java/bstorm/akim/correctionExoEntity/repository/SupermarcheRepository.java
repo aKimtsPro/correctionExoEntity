@@ -8,5 +8,7 @@ import java.util.Optional;
 
 public interface SupermarcheRepository extends JpaRepository<Supermarche, Integer> {
 
+    // select s from Supermarche s where s.directeur.id = ?1.id
     Optional<Supermarche> findByDirecteur(Employe directeur);
+
 }

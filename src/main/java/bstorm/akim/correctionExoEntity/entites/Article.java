@@ -27,7 +27,7 @@ public class Article {
     private String description;
 
     @Column
-    private double prix;
+    private Double prix;
 
     @ManyToOne
     @JoinColumn(
